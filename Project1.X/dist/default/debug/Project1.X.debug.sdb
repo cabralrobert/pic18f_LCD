@@ -1,0 +1,106 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"62 /opt/microchip/xc8/v1.41/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v1.41/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 /opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 /opt/microchip/xc8/v1.41/sources/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 /opt/microchip/xc8/v1.41/sources/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"10 /opt/microchip/xc8/v1.41/sources/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"11 /opt/microchip/xc8/v1.41/sources/common/sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"8 /opt/microchip/xc8/v1.41/sources/common/sprcmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"15 /opt/microchip/xc8/v1.41/sources/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"127 /home/robertcabral/Dropbox/UFC/Semestre 5/Microcontroladores/projects/Project1.X/main.c
+[v _enable enable `(v  1 e 1 0 ]
+"140
+[v _initLCD initLCD `(v  1 e 1 0 ]
+"155
+[v _writeChar writeChar `(v  1 e 1 0 ]
+"163
+[v _writeLCD writeLCD `(v  1 e 1 0 ]
+"169
+[v _main main `(v  1 e 1 0 ]
+"2668 /opt/microchip/xc8/v1.41/include/pic18f4550.h
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+"2788
+[v _PORTE PORTE `VEuc  1 e 1 @3972 ]
+[s S21 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+`uc 1 RE3 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 RDPU 1 0 :1:7 
+]
+"2830
+[s S28 . 1 `uc 1 CK1SPP 1 0 :1:0 
+`uc 1 CK2SPP 1 0 :1:1 
+`uc 1 OESPP 1 0 :1:2 
+]
+[s S32 . 1 `uc 1 PD2 1 0 :1:0 
+`uc 1 PC2 1 0 :1:1 
+`uc 1 CCP10 1 0 :1:2 
+`uc 1 CCP9E 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 CCP2E 1 0 :1:7 
+]
+[s S39 . 1 `uc 1 RDE 1 0 :1:0 
+`uc 1 WRE 1 0 :1:1 
+`uc 1 CS 1 0 :1:2 
+`uc 1 PC3E 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 PA2E 1 0 :1:7 
+]
+[s S46 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PB2 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 RE7 1 0 :1:7 
+]
+[u S51 . 1 `S21 1 . 1 0 `S28 1 . 1 0 `S32 1 . 1 0 `S39 1 . 1 0 `S46 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES51  1 e 1 @3972 ]
+"3954
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"4175
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+"169 /home/robertcabral/Dropbox/UFC/Semestre 5/Microcontroladores/projects/Project1.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"181
+} 0
+"163
+[v _writeLCD writeLCD `(v  1 e 1 0 ]
+{
+[v writeLCD@i i `i  1 a 2 7 ]
+[v writeLCD@a a `*.32uc  1 p 2 3 ]
+"167
+} 0
+"155
+[v _writeChar writeChar `(v  1 e 1 0 ]
+{
+[v writeChar@a a `uc  1 a 1 wreg ]
+[v writeChar@a a `uc  1 a 1 wreg ]
+[v writeChar@a a `uc  1 a 1 2 ]
+"161
+} 0
+"140
+[v _initLCD initLCD `(v  1 e 1 0 ]
+{
+"153
+} 0
+"127
+[v _enable enable `(v  1 e 1 0 ]
+{
+"138
+} 0
