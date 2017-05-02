@@ -71,24 +71,17 @@
 
 #define _XTAL_FREQ 8000000
 
-int a=1,b=1;
-
 void enable(){     
-    if(PORTEbits.RE1==1)
-        PORTEbits.RE1=0;   
-    else
-        PORTEbits.RE1=1;
+    PORTEbits.RE1=1;   
     __delay_ms(10);
-    
-    if(PORTEbits.RE1==1)
-        PORTEbits.RE1=0;   
-    else
-        PORTEbits.RE1=1;
+    PORTEbits.RE1=0;
+    __delay_ms(10);
+    PORTEbits.RE1=1;   
     __delay_ms(10);
 }
 
 void sendCMD(int value){
-    PORTEbits.RE2 = 0; //RS    
+    PORTEbits.RE2 = 0; //RS
     PORTD = value;
     enable();
     __delay_ms(10);
@@ -102,10 +95,11 @@ void setLine(int a, int b){
 }
 
 void initLCD(){
-    sendCMD(0x80);
-    sendCMD(0x30);
+    sendCMD(0x01);    
     sendCMD(0x38);
+    sendCMD(0x80);    
     sendCMD(0xf);
+    sendCMD(0x01);
     __delay_ms(10);    
 }
 
@@ -113,9 +107,8 @@ void writeChar(char value){
     PORTEbits.RE2 = 1; //RS    
     PORTD = value;
     enable();
-    __delay_ms(10);
+    __delay_ms(10);        
     PORTEbits.RE2 = 0; //RS                    
-    setLine(a++,b);
 }
 
 void writeLCD(char *a){
@@ -166,22 +159,16 @@ void init_time(){
     INTCONbits.GIE=1;
 }*/
 
-void setAB(int c, int d){
-    a = c;
-    b = d;
-    setLine(c,d);
-}
-
 void main(void) {    
-    TRISD = 0x00;   
-    TRISE = 0x00;           
-    
-    PORTE = 0x00;  
+    TRISD = 0x00;
+    TRISE = 0x00;    
+    PORTE = 0x00;
     
     initLCD();
-    writeLCD("Robert Cabral"); 
-    setAB(2,2);
-    writeLCD("Testeee"); 
+    setLine(2,1);
+    writeLCD("Bem vindo ao");     
+    setLine(3,2);
+    writeLCD("toc toc :D");
     
     while(1);
     return;
